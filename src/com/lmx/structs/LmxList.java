@@ -1,13 +1,12 @@
-package model.structs;
+package com.lmx.structs;
 
 /**
  *
- * @author LexCovent
+ * @author Lexynux
  * @param <T> Tipo de objetos que la lista debera soportar. Integer, Double,
- * Character, etc.
  */
-public class LinkedLst<T> {
-
+public class LmxList<T> {
+    
     // Reference to the firs element of the list
     private Node head;
     // Reference to the last element of the list
@@ -15,13 +14,13 @@ public class LinkedLst<T> {
     // Couter for the length of the list
     private int length;
 
-    public LinkedLst() {
+    public LmxList() {
         this.head = null;
         this.tail = null;
         this.length = 0;
     }
 
-    public LinkedLst(Node object) {
+    public LmxList(Node object) {
         this.head = new Node(object);
         this.tail = new Node(object);
         this.length = 1;
@@ -107,7 +106,7 @@ public class LinkedLst<T> {
          */
         for (Node aux = this.getHead(); aux != null; aux = aux.getNextElement()) {
             // Print the value on the node
-            System.out.println("{" + aux.getObject().toString() + "}");
+            System.out.print("{" + aux.getObject().toString() + "}");
         }
     }
 
@@ -137,6 +136,9 @@ public class LinkedLst<T> {
         }
     }
 
+    /**
+     * Deletes the las element from the list
+     */
     public void deleteLast() {
         if (!this.isEmpty()) {
             /* If the list is NOT empty, when it has JUST ONE element it is goig to be empty,
@@ -163,6 +165,10 @@ public class LinkedLst<T> {
         }
     }
 
+    /**
+     * Delete an element in the given position starting indexes from 1
+     * @param position Index of the element to delete
+     */
     public void deleteByPosition(int position) {
         if (!this.isEmpty()) {
             /* If the list is NOT empty, when the element to be deleted is the
@@ -196,4 +202,5 @@ public class LinkedLst<T> {
             }
         }
     }
+    
 }

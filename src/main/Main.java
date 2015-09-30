@@ -1,6 +1,6 @@
 package main;
 
-import model.structs.LinkedLst;
+import com.lmx.structs.LmxList;
 
 /**
  *
@@ -13,7 +13,7 @@ public class Main {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        LinkedLst <Integer> lista = new LinkedLst();
+        LmxList <Integer> lista = new LmxList();
         
         lista.addLast(12);
         lista.addLast(90);
